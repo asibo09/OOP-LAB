@@ -1,0 +1,43 @@
+20
+javac -d \20-compilation-basics\bin\src\Calculator.java(così lo crea)
+mkdir/md \20-compilation-basics\bin
+javac -d .\20-compilation-basics\bin\ .\20-compilation-basics\src\Calculator.java(aggiunto alla cartella bin già creata in precedenza)
+java -cp 20../bin Calculator
+
+cd ..(-1 lv)
+tree(visualizza organizzazione)
+
+21
+javac -d .\21-compilation-with-packages\bin\ .\21-compilation-with-packages\src\compilation\lab\math\ComplexNum.java
+java -cp .\21-compilation-with-packages\bin\ compilation.lab.math.ComplexNum
+(DEVE PARTIRE PER FORZA DA BIN!!!!)
+
+22
+(caricare la libreria)
+javac -cp 21-compilation-with-packages\bin\ -d 22-compilation-classpath\bin\ 22-compilation-classpath\src\compilation\lab\math\UseComplex.java
+(ha compilato la nostra classe, ora la lancio)
+java -cp "22-compilation-classpath\bin;21-compilation-with-packages\bin\" compilation.lab.math.UseComplex
+java -cp ".\22-compilation-classpath\bin;.\21-compilation-with-packages\bin\" compilation.lab.math.UseComplex (differenza: ".\"  ;errore che avevo fatto)
+(WSL): java -cp 22-compilation-classpath/bin:21-compilation-with-packages/bin/ compilation.lab.math.UseComplex(WSL)
+
+23
+mkdir/md 23-reference-value/bin  (creazione di bin)
+javac -d 23-reference-value/bin/ 23-reference-value/src/*.java
+java -cp 23-reference-value/bin "NomeClasse"
+
+24
+mkdir/md 24-program-arguments/bin
+javac -d 24-program-arguments/bin 24-program-arguments/src/main/java/it/unibo/cli/arguments/test/TestCommandLine.java
+java -cp 24-program-arguments/bin it.unibo.cli.arguments.test.TestCommandLine 
+
+25
+javac -d 25-constructors/bin 25-constructors/src/main/java/it/unibo/constructors/*.java
+java -cp 25-constructors/bin/ it.unibo.constructors."NomeClasse"
+
+26
+javac -d  26-array/bin 26-array/src/main/java/it/unibo/arrays/*.java
+java -cp 26-array/bin/ it.unibo.arrays."NomeClasse"
+
+27
+javac -d 27-debug/bin 27-debug/src/main/java/Collatz.java
+java -cp 27-debug/bin Collatz "Numero da inserire a mano"
